@@ -15,9 +15,13 @@ This is the mathematical description for one such lattice.
 
  ![image](https://github.com/MayankPunghal/Lattice-Based-Cryptography/assets/50830003/e56b628c-1342-4bae-ac6d-fcd05d5759a1)
 
-Figure 1 : Image showing a Lattice
+*Figure 1 : Image showing a Lattice*
+
 Lattice based cryptography is basically applied on areas where security of our data is of significant importance. This technique is entirely based on the hardness of the problem. We use problems like shortest vector problem, closet vector problem and SIS problems.
 Some other lattice based problems are mentioned below:
+ 
+ ![image](https://github.com/MayankPunghal/Lattice-Based-Cryptography/assets/50830003/6a218c6d-2d88-43da-9536-2702e3bbfb9c)
+
  
 The main issue with classical cryptosystems are that the key size is small for these systems. Moreover, there are loopholes in these techniques. Suppose someone transmitting information without the use of OTP, a person with good knowledge of cryptographic techniques could easily have access to the information. With the use of lattice based cryptography, it could be a very difficult task even for quantum computers to have access without the knowledge of the key. Computation speed of lattice based cryptosystems is higher than that of classical cryptosystems.
 GGH and NTRU are commonly used cryptosystems. While GGH is an asymmetric and based on closest vector problem, NTRU is a cryptosystem that is based on shortest vector problems. Both the problems are of significant difficulty. Lattice based cryptography can be used in digital signatures. 
@@ -46,13 +50,16 @@ Public parameters taken to explain examples :(N, p, q, d) = (7, 3, 41, 2).
 
 
 I.	Key Generation
-i.	The receiver end (User B) is required to choose 2 random polynomials(small) ,f and g from R where R=Z[X]/(X^N-1) such that inverse of both these polynomials exist and these values must be kept secret.
-ii.	Compute inverse (f modulo q) and inverse (f modulo p) using properties:
-•	f*fq-1 = 1 (modulo q)
-•	f*fp-1 = 1 (modulo p)
-iii.	Compute h=p * ((fq)*g)mod q
-•	public key for receiver: h
-•	private key for receiver: fg
+
+1.	The receiver end (User B) is required to choose 2 random polynomials(small) ,f and g from R where R=Z[X]/(X^N-1) such that inverse of both these polynomials exist and these values must be kept secret.
+
+2.	Compute inverse (f modulo q) and inverse (f modulo p) using properties:
+ 1.	f*fq-1 = 1 (modulo q)
+ 2.	f*fp-1 = 1 (modulo p)
+
+3.	Compute h=p * ((fq)*g)mod q
+ 1.	public key for receiver: h
+ 2. private key for receiver: fg
 
 ![image](https://github.com/MayankPunghal/Lattice-Based-Cryptography/assets/50830003/5441e624-4515-43ce-aa08-59b198824398)
-Figure 1 : Key Generation
+*Figure 2 : Key Generation*
