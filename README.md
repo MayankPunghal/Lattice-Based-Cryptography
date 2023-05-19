@@ -12,6 +12,7 @@ To prevent the repercussions of what quantum computers will be able to do in nea
 Lattice is an infinite arrangement of equidistant points in a vector space. Since it is infinite, and a computer does not have infinite memory, we use basis. A basis vector (usually linearly independent vectors) can be used to form whole Lattice. Lattices having same basis are equivalent.
  
 This is the mathematical description for one such lattice.
+
  ![image](https://github.com/MayankPunghal/Lattice-Based-Cryptography/assets/50830003/e56b628c-1342-4bae-ac6d-fcd05d5759a1)
 
 Figure 1 : Image showing a Lattice
@@ -28,3 +29,30 @@ Since this is the era of electronic payments, the security entirely depends on e
 It can  also be used in disk encryption. Disk encryption is basically the process of hiding information from illegitimate users by converting it to unreadable code. A password based authentication is required to access the information on the disk.
 An anonymous remailer is a service which receives messages with the information about were to forward it but it does not disclose the original sender of the email. It is not possible for the receiver to retrace the original sender of the message. Lattice based cryptography can be used in such scenarios.
 There can be various other innumerable applications where Lattice Based Cryptography exceeds every other algorithm in terms of reliability and security.
+
+# Algorithm
+
+Lattice based cryptography uses general presumed hard to solve lattice problems to set the basis of hardness to crack the cryptosystem’s for example SVP (Shortest Vector Problem), SIVP (Shortest In-dependent Vector Problem), Closest Vector Problem, BDD (Bounded Distance Decoding) etc.
+ Some of the recently used cryptosystems are Ring Learning With Error (R-LWE) and NTRU.
+
+We explored the implementation of NTRUEncrypt(Nth Degree Truncated Polynomial Ring Unit).It is basically a lattice based alternative to conventional crypt algorithms like RSA which uses Shortest Vector Problems in lattice.
+
+ Prerequisite: Encryption and decryption is occurring between two parties A and B, presumably A is the sender and B is the receiver. 
+Public parameters taken to explain examples :(N, p, q, d) = (7, 3, 41, 2).
+
+![image](https://github.com/MayankPunghal/Lattice-Based-Cryptography/assets/50830003/5fc22db7-69ee-4624-b979-a76d67ea4296)
+
+# NTRU Algorithm:
+
+
+I.	Key Generation
+i.	The receiver end (User B) is required to choose 2 random polynomials(small) ,f and g from R where R=Z[X]/(X^N-1) such that inverse of both these polynomials exist and these values must be kept secret.
+ii.	Compute inverse (f modulo q) and inverse (f modulo p) using properties:
+•	f*fq-1 = 1 (modulo q)
+•	f*fp-1 = 1 (modulo p)
+iii.	Compute h=p * ((fq)*g)mod q
+•	public key for receiver: h
+•	private key for receiver: fg
+
+![image](https://github.com/MayankPunghal/Lattice-Based-Cryptography/assets/50830003/5441e624-4515-43ce-aa08-59b198824398)
+Figure 1 : Key Generation
