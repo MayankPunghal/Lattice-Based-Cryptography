@@ -54,12 +54,12 @@ I.	Key Generation
  1.	The receiver end (User B) is required to choose 2 random polynomials(small) ,f and g from R where R=Z[X]/(X^N-1) such that inverse of   both these polynomials exist and these values must be kept secret.
 
  2.	Compute inverse (f modulo q) and inverse (f modulo p) using properties:
-  1.	f*fq-1 = 1 (modulo q)
-  2.	f*fp-1 = 1 (modulo p)
+    1.	f*fq-1 = 1 (modulo q)
+    2.	f*fp-1 = 1 (modulo p)
 
  3.	Compute h=p * ((fq)*g)mod q
-  1.	public key for receiver: h
-  2. private key for receiver: fg
+    1.	public key for receiver: h
+    2. private key for receiver: fg
 
 ![image](https://github.com/MayankPunghal/Lattice-Based-Cryptography/assets/50830003/5441e624-4515-43ce-aa08-59b198824398)
 *Figure 2 : Key Generation*
