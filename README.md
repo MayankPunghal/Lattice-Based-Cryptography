@@ -85,7 +85,7 @@ Example to explain Encryption of message sent by Alice to Bob:
 
 III.	Decryption
 
-   i. Encrypted message ‘e’ has been received by user B from user A. User B uses his private polynomial f to compute: a= f\*e (mod q) such that coefficients of a lie in the interval of length of q.
+   i. Encrypted message ‘e’ has been received by user B from user A. User B uses his private polynomial f to compute: a= f\*e (mod q)        such that coefficients of a lie in the interval of length of q.
    ii. User B computes polynomial b=a (mod p) and reduces each of the coefficients of (a modulo p).
    iii. User B uses the private key fp to compute: c=fp\*b (modulo p), which recovers the original message sent by user A
    
