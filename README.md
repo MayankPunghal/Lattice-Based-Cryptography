@@ -63,3 +63,16 @@ I.	Key Generation
 
 ![image](https://github.com/MayankPunghal/Lattice-Based-Cryptography/assets/50830003/5441e624-4515-43ce-aa08-59b198824398)
 *Figure 2 : Key Generation*
+
+# Example to explain key generation for user Bob:
+1. Bob chooses: f (x) = x6−x4+x3+x2−1 and g(x) = x6+x4−x2−x.
+2. Fq(x) = f (x)-1 (mod q) = 8x6 + 26x5 + 31x4+ 21x3 + 40x2 + 2x + 37 (mod 41).
+    Private Key: Fp(x) = f (x)-1 (mod p) = x6 + 2x5 + x3 + x2 +x + 1 (mod 3)
+3. Public key: 
+   h(x) = p * (Fq )*g(mod q) = 20x6 + 40x5 + 2x4+ 38x3 + 8x2 + 26x + 30 (mod 41) 
+   
+II.	 Encryption
+   i.	Convert message into a polynomial m  (coefficients  chosen as  modulo p in between –p/2 and p/2 (which is also known as center         lifting).For example, for the cases of NTRU we need a polynomial with coefficients between -1 and 1. We can turn our number into such     a polynomial by changing it into binary (or ternary system) so for example 13 can be represented as 1101 in binary and this becomes       the polynomial 1*x³+1*x²+0*x+1 = x³+x²+1.
+   ii.	Sender (User A) chooses another random polynomial r.
+   iii.	Compute the encrypted message e as: e=r*h + m (mod q)
+   
