@@ -84,11 +84,9 @@ Example to explain Encryption of message sent by Alice to Bob:
    2.	e(x) = 31x6+19x5+4x4+2x3+40x2+3x+25 (mod 41) using: e=r\*h + m (mod q)
 
 III.	Decryption
-
-   i.	Encrypted message ‘e’ has been received by user B from user A. User B uses his private polynomial f to compute: a= f\*e (mod q)
-   such that coefficients of a lie in the interval of length of q.
-   ii.	User B computes polynomial b=a (mod p) and reduces each of the coefficients of (a modulo p).
-   iii.	User B uses the private key fp to compute: c=fp\*b (modulo p), which recovers the original message sent by user A
+   i. Encrypted message ‘e’ has been received by user B from user A. User B uses his private polynomial f to compute: a= f\*e (mod q) such that coefficients of a lie in the interval of length of q.
+   ii. User B computes polynomial b=a (mod p) and reduces each of the coefficients of (a modulo p).
+   iii. User B uses the private key fp to compute: c=fp\*b (modulo p), which recovers the original message sent by user A
    
 ![image](https://github.com/MayankPunghal/Lattice-Based-Cryptography/assets/50830003/49c02235-e7b5-4a2c-b06d-5e24bf931da4)
 
