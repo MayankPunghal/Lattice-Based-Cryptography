@@ -73,7 +73,7 @@ I.	Key Generation
    
 II.	 Encryption
 
-    i.	Convert message into a polynomial m  (coefficients  chosen as  modulo p in between –p/2 and p/2 (which is also known as center         lifting).For example, for the cases of NTRU we need a polynomial with coefficients between -1 and 1. We can turn our number into such     a polynomial by changing it into binary (or ternary system) so for example 13 can be represented as 1101 in binary and this becomes       the polynomial 1*x³+1*x²+0*x+1 = x³+x²+1.
-    ii.	Sender (User A) chooses another random polynomial r.
-    iii.	Compute the encrypted message e as: e=r*h + m (mod q)
+   i.	Convert message into a polynomial m  (coefficients  chosen as  modulo p in between –p/2 and p/2 (which is also known as center        lifting).For example, for the cases of NTRU we need a polynomial with coefficients between -1 and 1. We can turn our number into such    a polynomial by changing it into binary (or ternary system) so for example 13 can be represented as 1101 in binary and this becomes      the polynomial 1*x³+1*x²+0*x+1 = x³+x²+1.
+   ii.	Sender (User A) chooses another random polynomial r.
+   iii.	Compute the encrypted message e as: e=r*h + m (mod q)
    
