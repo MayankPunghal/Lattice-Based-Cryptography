@@ -88,3 +88,12 @@ III.	Decryption
    i.	Encrypted message ‘e’ has been received by user B from user A. User B uses his private polynomial f to compute: a= f*e (mod q) such    that coefficients of a lie in the interval of length of q.
    ii.	User B computes polynomial b=a (mod p) and reduces each of the coefficients of (a modulo p).
    iii.	User B uses the private key fp to compute: c=fp*b (modulo p), which recovers the original message sent by user A
+   
+![image](https://github.com/MayankPunghal/Lattice-Based-Cryptography/assets/50830003/49c02235-e7b5-4a2c-b06d-5e24bf931da4)
+
+Example to explain Decryption of message ‘e’ received by Bob from Alice:
+  1.	Bob computes a=x6 + 10x5 +33x4 + 40x3 + 40x2 + x + 40 (mod 41) using a= f*e (mod q).
+  2.	Bob then obtains b = a(mod p) = x6+ 10x5 − 8x4 – x3 – x2+ x − 1 (mod 3).
+  3.	B reduces a(x) modulo p and computes c = Fp(x)*b(x)=  2x5 + x3 + x2 + 2x + 1 (mod 3).
+  4.	Centerlifting modulo p result in retrieval of sender's plain text m(x) =−x5 + x3 +x2 − x + 1.
+
