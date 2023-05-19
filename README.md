@@ -112,5 +112,5 @@ This technology has a medley of applications. NTRUEncrypt is a light, fast, secu
 
 # References
 
-[1] 	S. R. D. Pawan Kumar Pardhan, "Lattice based Cryptography," in Third International Conference on Computing Methodologies and Communication, 2019. 
-[2] 	C. Easttom, "An Analysis of Leading Lattice-Based Asymmetric Cryptographic Primitives," in IEEE 9th Annual Computing and Communication Workshop and Conference, Las Vegas, 2019. 
+    [1] 	S. R. D. Pawan Kumar Pardhan, "Lattice based Cryptography," in Third International Conference on Computing Methodologies and     Communication, 2019.
+    [2] 	C. Easttom, "An Analysis of Leading Lattice-Based Asymmetric Cryptographic Primitives," in IEEE 9th Annual Computing and     Communication Workshop and Conference, Las Vegas, 2019. 
