@@ -96,3 +96,21 @@ Example to explain Decryption of message ‘e’ received by Bob from Alice:
   3.	B reduces a(x) modulo p and computes c = Fp(x)\*b(x)=  2x5 + x3 + x2 + 2x + 1 (mod 3).
   4.	Centerlifting modulo p result in retrieval of sender's plain text m(x) =−x5 + x3 +x2 − x + 1.
 
+# Conclusion
+With the predicted advancement in quantum computing, we need to change our cryptography techniques so that we don’t get our data compromised. Lattice based cryptography is one such technique which can be applied. Lattice based cryptography is a complex technique for cryptography.It is emerging as a promising Post Quantum candidate.
+NTRU is better than others like GGH and LWE as it is more secure. It has been analysed via Shor’s algorithm and it has been proved that NTRU is not susceptible to Shor’s algorithm. However, modification in NTRU can be and should be explored like using multiple private keys. The parameters in NTRU should be taken carefully satisfying various conditions like  q>(6d+1)p and f and g being Ternary Polynomials and p and q should be relatively prime with q>p. 
+There are various applications in which Lattice based cryptography could be implemented such as Emails, IOT and electronic payments where we require high end but relatively quick encryption-decryption algorithm.
+
+# Result
+Hence we were able to implement and understand the working of NTRUEncrypt a lattice based cryptographic system and set up a message communication simulation.
+Here is an example of the output observed
+
+![image](https://github.com/MayankPunghal/Lattice-Based-Cryptography/assets/50830003/ed66942e-3eb0-463e-9bfe-94c88993feff)
+
+# Future Scope
+This technology has a medley of applications. NTRUEncrypt is a light, fast, secure and easy to implement system hence the future scope may include its implementation in day to day small tasks like E-mail encryption, IOT device Encryption and electronic payment security since these all require fast encryption decryption algorithm to function.
+
+# References
+
+[1] 	S. R. D. Pawan Kumar Pardhan, "Lattice based Cryptography," in Third International Conference on Computing Methodologies and Communication, 2019. 
+[2] 	C. Easttom, "An Analysis of Leading Lattice-Based Asymmetric Cryptographic Primitives," in IEEE 9th Annual Computing and Communication Workshop and Conference, Las Vegas, 2019. 
