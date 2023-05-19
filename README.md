@@ -73,7 +73,17 @@ I.	Key Generation
    
 II.	 Encryption
 
-   i.	Convert message into a polynomial m  (coefficients  chosen as  modulo p in between –p/2 and p/2 (which is also known as center        lifting).For example, for the cases of NTRU we need a polynomial with coefficients between -1 and 1. We can turn our number into such    a polynomial by changing it into binary (or ternary system) so for example 13 can be represented as 1101 in binary and this becomes      the polynomial 1*x³+1*x²+0*x+1 = x³+x²+1.
-   ii.	Sender (User A) chooses another random polynomial r.
-   iii.	Compute the encrypted message e as: e=r*h + m (mod q)
+    i.	Convert message into a polynomial m  (coefficients  chosen as  modulo p in between –p/2 and p/2 (which is also known as center         lifting).For example, for the cases of NTRU we need a polynomial with coefficients between -1 and 1. We can turn our number into such     a polynomial by changing it into binary (or ternary system) so for example 13 can be represented as 1101 in binary and this becomes       the polynomial 1*x³+1*x²+0*x+1 = x³+x²+1.
+    ii.	Sender (User A) chooses another random polynomial r.
+    iii.	Compute the encrypted message e as: e=r*h + m (mod q)
    
+![image](https://github.com/MayankPunghal/Lattice-Based-Cryptography/assets/50830003/2759296e-cd2d-4fe2-9950-e9dc6693bd56)
+
+Example to explain Encryption of message sent by Alice to Bob:
+   1.	m(x) = −x5 + x3 + x2 − x + 1 using the ephemeral key r(x) = x6− x5 + x − 1.
+   2.	e(x) = 31x6+19x5+4x4+2x3+40x2+3x+25 (mod 41) using: e=r*h + m (mod q)
+
+III.	Decryption
+   i.	Encrypted message ‘e’ has been received by user B from user A. User B uses his private polynomial f to compute: a= f*e (mod q) such    that coefficients of a lie in the interval of length of q.
+   ii.	User B computes polynomial b=a (mod p) and reduces each of the coefficients of (a modulo p).
+   iii.	User B uses the private key fp to compute: c=fp*b (modulo p), which recovers the original message sent by user A
